@@ -1,0 +1,459 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Typography */
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Theme Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --shadow-color: rgba(0,0,0,0.1);
+    --transition-duration: 0.5s;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --primary-color: #4a90e2;
+    --secondary-color: #7f8c8d;
+    --shadow-color: rgba(255,255,255,0.1);
+    --transition-duration: 0.5s;
+}
+
+/* Theme Transition */
+body, body * {
+    transition: 
+        background-color var(--transition-duration) ease,
+        color var(--transition-duration) ease,
+        border-color var(--transition-duration) ease;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-theme * {
+    color: var(--text-color);
+}
+
+body.dark-theme .navbar {
+    background: var(--bg-color);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+body.dark-theme .nav-links a {
+    color: var(--text-color);
+}
+
+body.dark-theme .theme-toggle {
+    color: var(--text-color);
+}
+
+/* Hero Section */
+body.dark-theme .hero {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://source.unsplash.com/1600x900/?coding');
+}
+
+/* About Section */
+body.dark-theme #about {
+    background: var(--bg-color);
+}
+
+/* Projects Section */
+body.dark-theme #projects {
+    background: var(--bg-color);
+}
+
+/* Contact Section */
+body.dark-theme #contact {
+    background: var(--bg-color);
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-details span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-link {
+    margin-left: auto;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* Dark Theme Project Cards */
+body.dark-theme .project-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Contact Form */
+body.dark-theme #contact-form input,
+body.dark-theme #contact-form textarea {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+body.dark-theme #contact-form button {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Social Icons */
+body.dark-theme .social-icon {
+    color: var(--text-color);
+}
+
+body.dark-theme .social-icon:hover {
+    color: var(--primary-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--bg-color);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar.active {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #2c3e50;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?coding');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+
+#home {
+    background-color: #f5f5f5;
+}
+
+#about {
+    background-color: #ffffff;
+}
+
+#projects {
+    background-color: #f8f9fa;
+}
+
+#contact {
+    background-color: #ffffff;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 10%;
+    background: #f9f9f9;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+.projects {
+    padding: 5rem 10%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 10%;
+    background: #f9f9f9;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #2980b9;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #3498db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+.experience-counter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.me{
+    display: flex;
+}
