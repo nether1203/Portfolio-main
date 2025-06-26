@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,38 +34,52 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <div class="profile-pic">
+            
+            <div class="profile-pic" data-aos="fade-right"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="1000"
+            data-aos-duration="1000">
                 <img src="/img/photo_5228744215113100620_y.jpg" alt="Profile Picture" class="profile-image">
-            </div>
-            <div class="about-text">
+     </div>
+            
+           <div class="about-text" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="1000"
+     data-aos-duration="1000">
+
                 <p>I am a passionate developer with expertise in modern web technologies. <span class="experience-counter" data-target="1.5">0</span> years of experience in programming.</p>
-            </div>
+         </div> 
         </div>
     </section>
      <section id="skills" class="skills">
         <h2>My Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card">
+           <div class="skill-card" data-aos="fade-up"
+                data-aos-duration="3000">
                 <i class="fab fa-js"></i>
                 <h3>JavaScript</h3>
                 <p class="skill-level"><span class="skill-years" data-target="1">0</span> years</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up"
+                data-aos-duration="3000">
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS</h3>
                 <p class="skill-level"><span class="skill-years" data-target="1.5">0</span> years</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up"
+                data-aos-duration="3000">
                 <i class="fab fa-html5"></i>
                 <h3>HTML</h3>
                 <p class="skill-level"><span class="skill-years" data-target="1.5">0</span> years</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up"
+                data-aos-duration="3000">
                 <i class="fab fa-github"></i>
                 <h3>GIT</h3>
                 <p class="skill-level"><span class="skill-years" data-target="1.8">0</span> years</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="fade-up"
+                data-aos-duration="3000">
                 <i class="fab fa-sass"></i>
                 <h3>SCSS</h3>
                 <p class="skill-level"><span class="skill-years" data-target="0.5">0</span> year</p>
@@ -75,7 +90,9 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>My Projects</h2>
-            <div class="project-grid" id="projects-container">
+            <div class="project-grid" id="projects-container" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
+            </div>
                 
             </div>
         </div>
@@ -105,5 +122,10 @@
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>;
+
+    <script>
+  AOS.init();
+</script>
 </body>
 </html>
