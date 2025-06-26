@@ -26,7 +26,7 @@ async function fetchProjects() {
         // Get repositories
         const bankRepo = repos.find(repo => repo.name === 'Minecraft-Bank');
         const facestoreRepo = repos.find(repo => repo.name === 'fakestore');
-        const portfolioRepo = repos.find(repo => repo.name === 'Portfolio');
+        const portfolioRepo = repos.find(repo => repo.name === 'Money-Rusher');
 
         // Process repositories
         const reposToShow = [bankRepo, facestoreRepo, portfolioRepo].filter(repo => repo !== undefined);
